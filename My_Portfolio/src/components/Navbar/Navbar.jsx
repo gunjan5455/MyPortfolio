@@ -24,11 +24,14 @@
 // export default Navbar;
 
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 const Navbar = ({ refs }) => {
   const [active, setActive] = useState("Profile");
   const navItems = ["Profile", "Projects", "Skills", "Contact Me"];
+  const { theme } = useContext(ThemeContext);
   const handleScroll = (key) => {
     if (key === "Contact Me") {
       key = "Contact";
@@ -45,7 +48,11 @@ const Navbar = ({ refs }) => {
           className="md:mx-10 md:text-lg cursor-pointer uppercase relative group"
         >
           {item}
-          <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+          <span
+            className={`absolute left-0 -bottom-1 h-0.5 w-full ${
+              theme === "light" ? "bg-black" : "bg-white"
+            } scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+          />
         </div>
       ))}
     </div>

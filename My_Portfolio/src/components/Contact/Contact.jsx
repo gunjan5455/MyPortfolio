@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../Context/ThemeContext";
+
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div>
       <h1 className="work-sans-heading text-5xl p-6 text-center mt-22 mb-14">
@@ -8,19 +12,29 @@ const Contact = () => {
         <input
           type="text"
           placeholder="Name"
-          className="text-2xl h-16 md:w-1/2 p-4 m-4 rounded-3xl border border-gray-500 shadow-sm focus:outline-none focus:ring-1 focus:ring-black"
+          className={`${
+            theme === "light" ? "placeholder-black" : "placeholder-white"
+          } text-2xl h-16 md:w-1/2 p-4 m-4 rounded-3xl border border-gray-500 shadow-sm focus:outline-none focus:ring-1 focus:ring-black`}
         />
         <input
           type="email"
           placeholder="Email"
-          className="text-2xl h-16 md:w-1/2 p-4 m-4 rounded-3xl border border-gray-500 shadow-sm focus:outline-none focus:ring-1 focus:ring-black"
+          className={`${
+            theme === "light" ? "placeholder-black" : "placeholder-white"
+          } text-2xl h-16 md:w-1/2 p-4 m-4 rounded-3xl border border-gray-500 shadow-sm focus:outline-none focus:ring-1 focus:ring-black`}
         />
         <textarea
           rows="7"
           placeholder="Message"
-          className="text-2xl md:w-1/2 p-4 m-4 border border-gray-500 rounded-3xl shadow-sm resize-none focus:outline-none focus:ring-1 focus:ring-black"
+          className={`${
+            theme === "light" ? "placeholder-black" : "placeholder-white"
+          } text-2xl md:w-1/2 p-4 m-4 border border-gray-500 rounded-3xl shadow-sm resize-none focus:outline-none focus:ring-1 focus:ring-black`}
         />
-        <button className="bg-black w-52 md:w-96 h-14 mt-4 text-white text-xl font-semibold rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110">
+        <button
+          className={`${
+            theme === "light" ? "bg-black text-white" : "bg-white text-black"
+          } cursor-pointer w-52 md:w-96 h-14 mt-4 text-xl font-semibold rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110`}
+        >
           Submit
         </button>
       </form>

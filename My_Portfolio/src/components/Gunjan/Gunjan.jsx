@@ -1,9 +1,15 @@
 import linkedinIcon from "../../assets/linkedin light.png";
+import linkedinIcond from "../../assets/linkedin dark.png";
 import githubIcon from "../../assets/github light.png";
+import githubIcond from "../../assets/github dark.png";
 import instagramIcon from "../../assets/instagram light.png";
+import instagramIcond from "../../assets/instagram.png";
 import profileIcon from "../../assets/profile.png";
 import resume from "../../assets/New_resume.pdf";
+import { useContext } from "react";
+import { ThemeContext } from "../../Context/ThemeContext";
 const Gunjan = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="h-[100dvh] m-h-[500px] flex flex-col justify-center items-center text-center md:flex-row md:space-x-56 px-4">
       <div>
@@ -26,7 +32,7 @@ const Gunjan = () => {
             rel="noopener noreferrer"
           >
             <img
-              src={linkedinIcon}
+              src={theme === "light" ? linkedinIcon : linkedinIcond}
               alt="LinkedIn Icon"
               className="w-8 h-8 transition-transform duration-200 hover:scale-110"
             />
@@ -38,7 +44,7 @@ const Gunjan = () => {
             rel="noopener noreferrer"
           >
             <img
-              src={githubIcon}
+              src={theme === "light" ? githubIcon : githubIcond}
               alt="githib Icon"
               className="w-8 h-8 transition-transform duration-200 hover:scale-110"
             />
@@ -50,7 +56,7 @@ const Gunjan = () => {
             rel="noopener noreferrer"
           >
             <img
-              src={instagramIcon}
+              src={theme === "light" ? instagramIcon : instagramIcond}
               alt="instagram Icon"
               className="w-8 h-8 transition-transform duration-200 hover:scale-110"
             />
@@ -66,7 +72,11 @@ const Gunjan = () => {
         </p>
         <a href={resume} download>
           {" "}
-          <button className="bg-black w-52 h-14 text-white text-xl font-semibold rounded-2xl shadow-2xl cursor-pointer transition-transform duration-200 hover:scale-110">
+          <button
+            className={`${
+              theme === "light" ? "bg-black text-white" : "bg-white text-black"
+            } w-52 h-14  text-xl font-semibold rounded-2xl shadow-2xl cursor-pointer transition-transform duration-200 hover:scale-110`}
+          >
             Resume
           </button>
         </a>
