@@ -4,7 +4,7 @@ import githubIcon from "../../assets/github light.png";
 import githubIcond from "../../assets/github dark.png";
 import instagramIcon from "../../assets/instagram light.png";
 import instagramIcond from "../../assets/instagram.png";
-import profileIcon from "../../assets/profile.png";
+import profileIcon from "../../assets/profile.PNG";
 import resume from "../../assets/New_resume.pdf";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
