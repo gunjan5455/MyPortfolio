@@ -66,7 +66,7 @@ const App = () => {
       <div>
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-20 cursor-pointer right-10 w-12 h-12 ${
+          className={`fixed bottom-20 cursor-pointer right-4 w-12 h-12 ${
             theme === "light" ? "bg-black text-white" : "bg-white text-black"
           } rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg`}
         >

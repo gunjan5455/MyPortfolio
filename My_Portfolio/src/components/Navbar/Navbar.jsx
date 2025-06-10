@@ -81,7 +81,7 @@ const Navbar = ({ refs }) => {
     <div className="w-full">
       <div className="flex justify-between items-center px-5 py-4  md:justify-center">
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-10 text-sm md:text-lg uppercase">
+        <div className="hidden md:flex gap-10 text-xs md:text-base uppercase">
           {navItems.map((item, index) => (
             <div
               onClick={() => handleScroll(item)}
@@ -134,7 +134,7 @@ const Navbar = ({ refs }) => {
             <div
               onClick={() => handleScroll(item)}
               key={index}
-              className="uppercase text-base cursor-pointer relative group"
+              className="uppercase text-sm cursor-pointer relative group"
             >
               {item}
               <span

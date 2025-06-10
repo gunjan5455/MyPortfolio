@@ -22,7 +22,7 @@ const ProjectList = [
     link: "https://github.com/gunjan5455/BookMyShow_MERN",
   },
   {
-    name: "Javascript WeatherApp",
+    name: "Js WeatherApp",
     description: "xyz",
     image: weather,
     link: "https://github.com/gunjan5455/WetherApp",
@@ -34,19 +34,16 @@ const Projects = () => {
       <h1 className="work-sans-heading text-5xl p-6 text-center my-14">
         PROJECTS
       </h1>
-      <div className="flex flex-wrap justify-around mx-24">
+      {/* <div className="flex flex-wrap justify-around mx-24">
         {ProjectList &&
           ProjectList.map((item, index) => {
             return (
               <a href={item.link} target="_blank " rel="noopner noreferrer">
-                <div
-                  key={index}
-                  className="flex flex-col items-center p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
-                >
+                <div key={index}>
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-2xl transition-transform duration-200 hover:scale-105 object-cover"
+                    className="h-40 w-40 sm:h-48 sm:w-56 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-2xl transition-transform duration-200 hover:scale-105 object-cover"
                   />
                   <h1 className="text-center mt-3 text-xl font-semibold">
                     {item.name}
@@ -58,6 +55,31 @@ const Projects = () => {
               </a>
             );
           })}
+      </div> */}
+      <div className="flex flex-wrap justify-around gap-8 px-6 py-10">
+        {ProjectList &&
+          ProjectList.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-64 w-64 sm:h-[22rem] sm:w-80 md:h-[22rem] md:w-80 lg:h-[22rem] lg:w-80 rounded-2xl transition-transform duration-200 hover:scale-105 object-cover"
+                />
+                <h1 className="text-center mt-3 text-xl font-semibold">
+                  {item.name}
+                </h1>
+                <h2 className="text-center mb-5 text-gray-600">
+                  {item.description}
+                </h2>
+              </div>
+            </a>
+          ))}
       </div>
     </div>
   );
