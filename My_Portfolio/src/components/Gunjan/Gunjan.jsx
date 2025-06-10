@@ -17,14 +17,14 @@ const Gunjan = () => {
         <img
           src={profileIcon}
           alt="profile Icon"
-          className="w-60 h-60 md:w-110 md:h-110 mb-6 "
+          className="w-60 h-60 md:w-90 md:h-90 mb-6 "
         />
       </div>
       {/* Text Content */}
       <div>
-        <h1 className="work-sans-heading text-5xl p-1">GUNJAN</h1>
-        <h1 className="work-sans-heading text-5xl p-2">KOTADIYA</h1>
-        <p className="text-xl">SOFTWARE ENGINEER</p>
+        <h1 className="work-sans-heading text-4xl p-1">GUNJAN</h1>
+        <h1 className="work-sans-heading text-4xl p-2">KOTADIYA</h1>
+        <p className="text-lg">SOFTWARE ENGINEER</p>
         <span className="flex justify-center items-center space-x-4 m-4">
           <a
             href="https://www.linkedin.com/in/gunjan-kotadiya-008bb526a"
@@ -34,7 +34,7 @@ const Gunjan = () => {
             <img
               src={theme === "light" ? linkedinIcon : linkedinIcond}
               alt="LinkedIn Icon"
-              className="w-8 h-8 transition-transform duration-200 hover:scale-110"
+              className="w-7 h-7 transition-transform duration-200 hover:scale-110"
             />
           </a>
 
@@ -46,7 +46,7 @@ const Gunjan = () => {
             <img
               src={theme === "light" ? githubIcon : githubIcond}
               alt="githib Icon"
-              className="w-8 h-8 transition-transform duration-200 hover:scale-110"
+              className="w-7 h-7 transition-transform duration-200 hover:scale-110"
             />
           </a>
 
@@ -58,11 +58,11 @@ const Gunjan = () => {
             <img
               src={theme === "light" ? instagramIcon : instagramIcond}
               alt="instagram Icon"
-              className="w-8 h-8 transition-transform duration-200 hover:scale-110"
+              className="w-7 h-7 transition-transform duration-200 hover:scale-110"
             />
           </a>
         </span>
-        <p className="mb-4 text-xl">
+        <p className="mb-4 text-lg">
           {/* Passionate for <br />
           developing modern <br />
           software solutions. */}
@@ -75,7 +75,7 @@ const Gunjan = () => {
           <button
             className={`${
               theme === "light" ? "bg-black text-white" : "bg-white text-black"
-            } w-52 h-14  text-xl font-semibold rounded-2xl shadow-2xl cursor-pointer transition-transform duration-200 hover:scale-110`}
+            } w-52 h-14  text-base font-semibold rounded-2xl shadow-2xl cursor-pointer transition-transform duration-200 hover:scale-110`}
           >
             Resume
           </button>

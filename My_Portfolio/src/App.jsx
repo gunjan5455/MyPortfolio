@@ -31,7 +31,7 @@ const App = () => {
           className="
       fixed
       top-15 md:bottom-8 lg:top-6 xl:bottom-12
-      right-4 md:right-6 lg:right-8
+      right-4 md:right-6 lg:right-4
       w-8 h-8 md:w-10 md:h-10
       cursor-pointer
       transition-transform duration-200
@@ -66,7 +66,7 @@ const App = () => {
       <div>
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-20 cursor-pointer right-4 w-12 h-12 ${
+          className={`fixed bottom-20 cursor-pointer right-4 w-10 h-10 ${
             theme === "light" ? "bg-black text-white" : "bg-white text-black"
           } rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg`}
         >

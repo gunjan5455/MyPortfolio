@@ -31,7 +31,7 @@ const ProjectList = [
 const Projects = () => {
   return (
     <div className="">
-      <h1 className="work-sans-heading text-5xl p-6 text-center my-14">
+      <h1 className="work-sans-heading text-4xl p-6 text-center my-14">
         PROJECTS
       </h1>
       {/* <div className="flex flex-wrap justify-around mx-24">
@@ -56,7 +56,7 @@ const Projects = () => {
             );
           })}
       </div> */}
-      <div className="flex flex-wrap justify-around gap-8 px-6 py-10">
+      <div className="flex flex-wrap justify-around gap-8 px-6 md:mx-20 py-10">
         {ProjectList &&
           ProjectList.map((item, index) => (
             <a
@@ -69,7 +69,7 @@ const Projects = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="h-64 w-64 sm:h-[22rem] sm:w-80 md:h-[22rem] md:w-80 lg:h-[22rem] lg:w-80 rounded-2xl transition-transform duration-200 hover:scale-105 object-cover"
+                  className="h-64 w-64 sm:h-[18rem] sm:w-68 md:h-[18rem] md:w-68 lg:h-[18rem] lg:w-68 rounded-2xl transition-transform duration-200 hover:scale-105 "
                 />
                 <h1 className="text-center mt-3 text-xl font-semibold">
                   {item.name}
