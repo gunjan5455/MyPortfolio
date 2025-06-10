@@ -27,9 +27,20 @@ const App = () => {
         <img
           src={theme === "light" ? sun : moon}
           onClick={toggleTheme}
-          className="fixed bottom-180  md:bottom-214 cursor-pointer right-8 w-10 h-10 transition-transform duration-200 hover:scale-120"
+          alt="Theme Toggle"
+          className="
+      fixed
+      top-15 md:bottom-8 lg:top-6 xl:bottom-12
+      right-4 md:right-6 lg:right-8
+      w-8 h-8 md:w-10 md:h-10
+      cursor-pointer
+      transition-transform duration-200
+      hover:scale-110
+      z-50
+    "
         />
       </div>
+
       <Navbar
         refs={{
           Profile: profileRef,

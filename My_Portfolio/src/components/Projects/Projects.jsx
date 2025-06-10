@@ -31,7 +31,7 @@ const ProjectList = [
 const Projects = () => {
   return (
     <div className="">
-      <h1 className="work-sans-heading text-5xl p-6 text-center mb-14">
+      <h1 className="work-sans-heading text-5xl p-6 text-center my-14">
         PROJECTS
       </h1>
       <div className="flex flex-wrap justify-around mx-24">
@@ -39,16 +39,21 @@ const Projects = () => {
           ProjectList.map((item, index) => {
             return (
               <a href={item.link} target="_blank " rel="noopner noreferrer">
-                <div key={index}>
+                <div
+                  key={index}
+                  className="flex flex-col items-center p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+                >
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-68 w-66 rounded-2xl transition-transform duration-200 hover:scale-105"
+                    className="h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-2xl transition-transform duration-200 hover:scale-105 object-cover"
                   />
-                  <h1 className="text-center mt-3 work-sans-heading text-xl">
+                  <h1 className="text-center mt-3 text-xl font-semibold">
                     {item.name}
                   </h1>
-                  <h2 className="text-center mb-5">{item.description}</h2>
+                  <h2 className="text-center mb-5 text-gray-600">
+                    {item.description}
+                  </h2>
                 </div>
               </a>
             );

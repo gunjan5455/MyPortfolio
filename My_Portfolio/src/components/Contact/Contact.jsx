@@ -33,7 +33,7 @@ const Contact = () => {
         <button
           className={`${
             theme === "light" ? "bg-black text-white" : "bg-white text-black"
-          } cursor-pointer w-52 md:w-96 h-14 mt-4 text-xl font-semibold rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110`}
+          } cursor-pointer w-46 md:w-96 lg:w-[390px] h-14 mt-4 text-xl font-semibold rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110`}
         >
           Submit
         </button>
