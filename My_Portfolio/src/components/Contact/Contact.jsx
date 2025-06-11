@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import axios from "axios";
 import { useState } from "react";
 const Contact = () => {
@@ -20,17 +20,16 @@ const Contact = () => {
         toast.success("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
       } else {
-        console.log("Error toast firing...");
-        toast.error("Something went wrong. Please try again.");
+        toast.error(res.data.message);
       }
     } catch (err) {
       console.error(err);
-      toast.error("Failed to send message");
+
+      toast.error("Failed to send message, Try again later");
     }
   };
   return (
     <div>
-      <Toaster richColors position="center" />
       <h1 className="work-sans-heading text-4xl p-6 text-center mt-22 mb-14">
         CONTACT
       </h1>

@@ -1,9 +1,10 @@
 import express from "express";
 import cors from "cors";
 import mailRouter from "./routes/MailRoutes.js";
-
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
-const port = 4000;
+const port = process.env.PORT;
 
 app.use(express.json());
 app.use(cors());

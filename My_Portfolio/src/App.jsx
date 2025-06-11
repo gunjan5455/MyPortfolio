@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
+import { Toaster } from "sonner";
 const App = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const profileRef = useRef(null);
@@ -40,7 +41,7 @@ const App = () => {
     "
         />
       </div>
-
+      <Toaster richColors position="top-center" />
       <Navbar
         refs={{
           Profile: profileRef,

@@ -7,12 +7,12 @@ const sendEmail = (email, subject, html) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "gunjankotadiya1@gmail.com",
-      pass: "zymlsgtdsnbnmjnd",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
   let mailDetails = {
-    from: "gunjankotadiy1@gmail.com",
+    from: process.env.EMAIL_USER,
     to: emailId,
     subject: subject,
     html: html,

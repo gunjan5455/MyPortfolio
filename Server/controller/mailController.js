@@ -3,7 +3,6 @@ import userMessageScript from "../Scripts/userMessageScript.js";
 import sendEmail from "../Utilities/NotificationUtilities.js";
 import validator from "validator";
 const sendMailer = (req, res) => {
-  console.log("BODY RECEIVED:", req.body);
   const { name, email, message } = req.body || {};
   if (!name || !email || !message) {
     return res.status(401).send({
@@ -25,7 +24,7 @@ const sendMailer = (req, res) => {
 
   setTimeout(() => {
     sendEmail(
-      ["gunjankotadiya5455@gmail.com"],
+      [process.env.ADMIN],
       "You've Got a New Message via Your Portfolio",
       gunjanMessageScript(name, email, message)
     );
