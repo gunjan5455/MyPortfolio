@@ -6,7 +6,8 @@ import { useState } from "react";
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-
+  // const url = "http://localhost:4000/api/mail"
+  const url = "https://gunjan-dbrg.onrender.com/api/mail";
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -14,7 +15,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/api/mail", form);
+      const res = await axios.post(`${url}`, form);
       console.log(res);
       if (res.data.success) {
         toast.success("Message sent successfully!");
