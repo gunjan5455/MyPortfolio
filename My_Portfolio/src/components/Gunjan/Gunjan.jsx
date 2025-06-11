@@ -5,6 +5,7 @@ import githubIcond from "../../assets/github dark.png";
 import instagramIcon from "../../assets/instagram light.png";
 import instagramIcond from "../../assets/instagram.png";
 import profileIcon from "../../assets/profile.PNG";
+//import profileIcon from "../../assets/convocation.JPEG";
 import resume from "../../assets/New_resume.pdf";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
@@ -17,14 +18,14 @@ const Gunjan = () => {
         <img
           src={profileIcon}
           alt="profile Icon"
-          className="w-60 h-60 md:w-90 md:h-90 mb-6 "
+          className="w-60 h-60 md:w-90 md:h-90 mb-6 rounded-full "
         />
       </div>
       {/* Text Content */}
       <div>
         <h1 className="work-sans-heading text-4xl p-1">GUNJAN</h1>
         <h1 className="work-sans-heading text-4xl p-2">KOTADIYA</h1>
-        <p className="text-lg">SOFTWARE ENGINEER</p>
+        <p className="text-lg"></p>
         <span className="flex justify-center items-center space-x-4 m-4">
           <a
             href="https://www.linkedin.com/in/gunjan-kotadiya-008bb526a"
