@@ -31,7 +31,7 @@ const App = () => {
       .then((res) => {
         // console.log("Full response:", res);
         // console.log("Data:", res.data);
-        toast.success(res.data.message);
+        console.log(res.data.message);
       })
       .catch((err) => {
         toast.error("Server ping failed:");
