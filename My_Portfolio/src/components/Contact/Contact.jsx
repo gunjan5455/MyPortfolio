@@ -13,20 +13,27 @@ const Contact = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const res = await axios.post(`${url}`, form);
       console.log(res);
+
       if (res.data.success) {
         toast.success("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
       } else {
-        toast.error(res.data.message);
+        toast.error(
+          res.data.error || "Something went wrong. Please try again."
+        );
       }
     } catch (err) {
       console.error(err);
 
-      toast.error("Failed to send message, Try again later");
+      // Handle express-rate-limit or other backend errors
+      if (err.response && err.response.data && err.response.data.error) {
+        toast.error(err.response.data.error);
+      } else {
+        toast.error("Failed to send message. Try again later.");
+      }
     }
   };
   return (

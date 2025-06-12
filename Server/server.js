@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const throttlePerIP = rateLimit({
   windowMs: 10 * 60 * 1000, //10 minutes
-  max: 1, // 1 request per 10 minutes per IP
+  max: 2, // 1 request per 10 minutes per IP
   standardHeaders: true,
   legacyHeaders: false,
   message: {
