@@ -1,5 +1,5 @@
 import "./App.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Gunjan from "./components/Gunjan/Gunjan";
@@ -12,7 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
-import { Toaster } from "sonner";
+import { toast, Toaster } from "sonner";
+import axios from "axios";
 const App = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const profileRef = useRef(null);
@@ -22,6 +23,21 @@ const App = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  // const url = "http://localhost:4000";
+  const url = "https://gunjan-dbrg.onrender.com";
+  useEffect(() => {
+    axios
+      .get(`${url}/ping`)
+      .then((res) => {
+        // console.log("Full response:", res);
+        // console.log("Data:", res.data);
+        toast.success(res.data.message);
+      })
+      .catch((err) => {
+        toast.error("Server ping failed:");
+        console.log("Server ping failed:", err);
+      });
+  }, []);
   return (
     <div className="roboto-mono">
       <div>
