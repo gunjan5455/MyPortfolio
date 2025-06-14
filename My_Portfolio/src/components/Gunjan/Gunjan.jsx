@@ -4,6 +4,7 @@ import githubIcon from "../../assets/github light.png";
 import githubIcond from "../../assets/github dark.png";
 import instagramIcon from "../../assets/instagram light.png";
 import instagramIcond from "../../assets/instagram.png";
+
 import profileIcon from "../../assets/profile.PNG";
 import resume from "../../assets/New_resume.pdf";
 import { useContext } from "react";
@@ -24,7 +25,7 @@ const Gunjan = () => {
       <div>
         <h1 className="work-sans-heading text-4xl p-1">GUNJAN</h1>
         <h1 className="work-sans-heading text-4xl p-2">KOTADIYA</h1>
-        <p className="text-lg"></p>
+        <p className="text-lg">SOFTWARE ENGINEER</p>
         <span className="flex justify-center items-center space-x-4 m-4">
           <a
             href="https://www.linkedin.com/in/gunjan-kotadiya-008bb526a"
@@ -75,7 +76,7 @@ const Gunjan = () => {
           <button
             className={`${
               theme === "light" ? "bg-black text-white" : "bg-white text-black"
-            } w-52 h-14  text-base font-semibold rounded-2xl shadow-2xl cursor-pointer transition-transform duration-200 hover:scale-110`}
+            } shad w-52 h-14  text-base font-semibold rounded-2xl shadow-2xl cursor-pointer transition-transform duration-200 hover:scale-110`}
           >
             Resume
           </button>

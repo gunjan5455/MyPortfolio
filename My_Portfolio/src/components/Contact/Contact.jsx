@@ -82,7 +82,7 @@ const Contact = () => {
           type="submit"
           className={`${
             theme === "light" ? "bg-black text-white" : "bg-white text-black"
-          } cursor-pointer w-40 md:w-80 lg:w-[300px] h-14 mt-4 text-base font-semibold rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110`}
+          } shad cursor-pointer w-40 md:w-80 lg:w-[300px] h-14 mt-4 text-base font-semibold rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110`}
         >
           Submit
         </button>

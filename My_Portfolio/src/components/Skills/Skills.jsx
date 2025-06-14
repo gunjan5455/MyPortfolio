@@ -1,5 +1,3 @@
-import React from "react";
-import checkIcon from "../../assets/vote-light.png";
 import java from "../../assets/java (1).png";
 import html from "../../assets/HTML.png";
 import css from "../../assets/css (2).png";
@@ -13,11 +11,10 @@ import js from "../../assets/javascript.png";
 import git from "../../assets/git.png";
 
 const Skills = () => {
-  const SkillList = ({ src, skill }) => {
+  const SkillList = ({ src }) => {
     return (
       <span className="mx-4 mb-6 md:mx-8 md:mb-8">
-        <img src={src} alt="" className="w-14 h-14 rounded" />
-        {/* <p className="text-center">{skill}</p> */}
+        <img src={src} alt="" className={` w-14 h-14 rounded`} />
       </span>
     );
   };

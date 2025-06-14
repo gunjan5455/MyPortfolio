@@ -45,7 +45,7 @@ const App = () => {
           src={theme === "light" ? sun : moon}
           onClick={toggleTheme}
           alt="Theme Toggle"
-          className="
+          className={`
       fixed
       top-15 md:bottom-8 lg:top-6 xl:bottom-12
       right-4 md:right-6 lg:right-4
@@ -54,7 +54,7 @@ const App = () => {
       transition-transform duration-200
       hover:scale-110
       z-50
-    "
+    `}
         />
       </div>
       <Toaster richColors position="top-center" />
@@ -84,8 +84,8 @@ const App = () => {
         <button
           onClick={scrollToTop}
           className={`fixed bottom-20 cursor-pointer right-4 w-10 h-10 ${
-            theme === "light" ? "bg-black text-white" : "bg-white text-black"
-          } rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg`}
+            theme === "light" ? "bg-black text-white " : "bg-white text-black "
+          } shad rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg`}
         >
           <FontAwesomeIcon icon={faArrowUp} className="text-xl" />
         </button>
