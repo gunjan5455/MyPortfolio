@@ -1,7 +1,8 @@
 import foodDel from "../../assets/food-del.png";
-import movieapp from "../../assets/movie-watchlist.png";
+// import movieapp from "../../assets/movie-watchlist.png";
+import movieapp from "../../assets/MovieLogo-d.png";
 import bookmyshow from "../../assets/BookMyShow.png";
-import weather from "../../assets/weather-app.png";
+import weather from "../../assets/weather-logo.png";
 const ProjectList = [
   {
     name: "Food delivery MERN",

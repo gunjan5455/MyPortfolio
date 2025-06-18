@@ -6,7 +6,7 @@ import instagramIcon from "../../assets/instagram light.png";
 import instagramIcond from "../../assets/instagram.png";
 
 import profileIcon from "../../assets/profile.PNG";
-import resume from "../../assets/New_resume.pdf";
+import resume from "../../assets/Gunjan_Kotadiya_Resume.pdf";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
 const Gunjan = () => {
